@@ -1,7 +1,8 @@
 #include <stdio.h>
-int main ()
+int main(void)
 {
-    char vorg [] = "\"Programming is like building a multilingual puzzle";
-    puts (vorg);
-return 0;
+char vorg[] = "\"Programming is like building a multilingual puzzle";
+
+puts(vorg);
+return (0);
 }
