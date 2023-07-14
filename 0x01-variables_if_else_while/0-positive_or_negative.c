@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - program generate random number and print if the number posetive negative or equal to zero
+ * main - generate random int number, is it posetive, negative, or equal to 0 ?
  *
  * Return: Always 0 (Success)
  */
