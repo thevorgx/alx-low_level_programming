@@ -4,14 +4,14 @@
 
 /* betty style doc for function main goes there */
 
-int main()
+int main(void)
 {
-   char ch;
+char alpha;
 
-    for (ch = 'a'; ch <= 'z'; ch++)
-        putchar(ch);
+for (alpha = 'a'; alpha <= 'z'; alpha++)
+	putchar(alpha);
 
-    putchar('\n');
+putchar('\n');
 
-    return 0;
+return 0;
 }
