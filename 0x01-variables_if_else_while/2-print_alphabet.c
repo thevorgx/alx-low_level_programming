@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* more headers goes there */
+/* main print alpha */
 
 /* betty style doc for function main goes there */
 
@@ -13,5 +13,5 @@ for (alpha = 'a'; alpha <= 'z'; alpha++)
 
 putchar('\n');
 
-return 0;
+return (0);
 }
