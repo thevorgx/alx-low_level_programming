@@ -1,9 +1,8 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 /**
- * main - Entry point of the program
+ * main - program generate random number and print if the number posetive negative or equal to zero
  *
  * Return: Always 0 (Success)
  */
