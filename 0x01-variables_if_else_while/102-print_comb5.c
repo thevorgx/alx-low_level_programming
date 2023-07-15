@@ -5,25 +5,29 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void) {
-int i, j;
+int main(void)
+{
+	int v1, v2;
 
-for (i = 0; i <= 99; i++)
-{
-for (j = i; j <= 99; j++)
-{
-putchar('0' + (i / 10));
-putchar('0' + (i % 10));
-putchar(' ');
-putchar('0' + (j / 10));
-putchar('0' + (j % 10));
-if (i != 99 || j != 99)
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-putchar('\n');
-return (0);
+	for (v1 = 0; v1 < 100; v1++)
+	{
+		for (v2 = v1; v2 < 100; v2++)
+		{
+			if (v1 != v2)
+			{
+				putchar((v1 / 10) + '0');
+				putchar((v1 % 10) + '0');
+				putchar(' ');
+				putchar((v2 / 10) + '0');
+				putchar((v2 % 10) + '0');
+				if (v1 != 98 || v2 != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
