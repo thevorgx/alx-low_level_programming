@@ -8,18 +8,17 @@
 
 int main(void):
 {
-char alpha;
+    char alpha;
 
-for (alpha = 'a'; alpha <= 'z'; alpha++)
-{
-if (alpha == 'e' || alpha == 'q')
-continue;
+    for (alpha = 'a'; alpha <= 'z'; alpha++)
+    {
+        if (alpha == 'e' || alpha == 'q')
+            continue;
 
-putchar(alpha);
-}
+        putchar(alpha);
+    }
 
-putchar('\n');
+    putchar('\n');
 
     return (0);
 }
-
