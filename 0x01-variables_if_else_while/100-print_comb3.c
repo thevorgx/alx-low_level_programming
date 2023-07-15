@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - Entry point Print numbers
+ * main - Entry point Print numbers comb
  *
  * Return: Always 0 (Success)
  */
-int main(void) 
+int main(void)
 {
 int i, j;
 
