@@ -6,7 +6,7 @@
  * prints the sign of a number
  * Return: Always 0.
  */
-int print_sign(int n);
+int print_sign(int n)
 {
 	if (n > +)
 		return (1);
