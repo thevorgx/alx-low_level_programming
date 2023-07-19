@@ -7,5 +7,5 @@
  * Return: Always n (Success)
  */
 int _abs(int r)
-	if (r>0)
+	if (r < 0)
 	return (r = r*-1);
