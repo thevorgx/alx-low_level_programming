@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * isalpha -> check for lower case char
+ * _isalpha -> check for lower case char
  * @c: the char to check
- * int _isalpha - take the output of this function and see
+ * int _isalpha(int c) - take the output of this function and see
  * if its lowercase using ASCII
  * Return: Always 0.
  */
