@@ -2,9 +2,10 @@
 
 /**
  * @n: the char to check
+ *
  * int print_sign(int n) - take the output of this function and see
  * prints the sign of a number
- * Return: Always 0.
+ * Return:  0 , 1 and -1
  */
 int print_sign(int n)
 {
