@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * mul - proto function
@@ -12,7 +12,6 @@
 int mul(int a, int b)
 
 {
-
 	int multip;
 
 	multip = a * b;
