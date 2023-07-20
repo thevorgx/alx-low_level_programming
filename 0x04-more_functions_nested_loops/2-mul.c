@@ -1,11 +1,20 @@
 #include "main"
 
+/**
+ * mul - proto function
+ *
+ * @a: First number
+ * @b: 2nd number
+ *
+ * Return: Multip a and b
+ */
+
 int mul(int a, int b)
+
 {
 
-int multip;
+	int multip;
 
-multip = a * b;
-
-return (multip);
+	multip = a * b;
+	return (multip);
 }
