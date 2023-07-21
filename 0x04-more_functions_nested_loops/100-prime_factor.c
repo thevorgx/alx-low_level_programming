@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - The prime factors
+ * main - the largest prime factor
  *
  * Return: Always 0
  */
@@ -9,7 +9,7 @@
 int main(void)
 {
 	long int v = 612852475143;
-	long int o = 2
+	long int o = 2;
 	long int fac=o;
 
 	d = 2;
