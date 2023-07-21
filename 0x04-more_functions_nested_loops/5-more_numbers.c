@@ -13,7 +13,7 @@ void more_numbers(void)
 	int j;
 
 	for (v = 1 ; v <= 10 ; v++)
-	{	
+	{
 		for (j = 0 ; j <= 14 ; j++)
 		{
 			if (j > 9)
@@ -24,4 +24,4 @@ void more_numbers(void)
 		_putchar('\n');
 
 	}
-}	
+}
