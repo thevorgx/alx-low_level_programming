@@ -1,16 +1,21 @@
-#include"main.h"
+#include "main.h"
+
+/**
+ * print_rev - check code
+ * @s: strin param
+ */
 void print_rev(char *s)
 {
-	char *fin = s;
+	int i = 0;
+	int len = 0;
 
-	while (*fin != '\0')
+	while (s[len] != '\0')
 	{
-		++fin;
+		len++;
 	}
-	while (fin != s)
+	for (i = len - 1; i >= 0; i--)
 	{
-		_putchar(*s);
-		--fin;
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
