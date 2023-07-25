@@ -1,7 +1,7 @@
 #include"main.h"
 
 /**
- *_strlen - check the code
+ *_strlen - check the code len
  *@s: pointer *s that we increment to be able to increment the value of len
  *@len: the value we want to return so we know the length of the string
  * Return: len
