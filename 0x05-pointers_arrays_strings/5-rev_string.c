@@ -3,7 +3,7 @@
 /**
  * rev_string -> reverse string func
  *
- * @s: Param
+ * @s: Parame
  */
 
 void rev_string(char *s)

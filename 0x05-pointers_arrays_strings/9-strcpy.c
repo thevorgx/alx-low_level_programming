@@ -4,7 +4,7 @@
  * *_strcpy - Copy strng to a destination
  *
  * @dest: destination param
- * @src: source param
+ * @src: source parame
  *
  * Return: dest
  */

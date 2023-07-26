@@ -3,7 +3,7 @@
 /**
  * puts_half -> Prints last half of a string
  *
- * @str: Input
+ * @str: parame
  */
 
 void puts_half(char *str)

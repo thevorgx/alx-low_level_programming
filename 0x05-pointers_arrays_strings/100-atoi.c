@@ -3,7 +3,7 @@
 /**
  * _atoi -> Convert string to integer
  *
- * @s: Para
+ * @s: Param
  *
  * Return: Int Converted
  */

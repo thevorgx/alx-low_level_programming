@@ -5,7 +5,7 @@
 /**
  * main - Generates random password
  *
- * Return: 0, nothing, nada, walo
+ * Return: 0, nothing, nada, walo.
  */
 
 int main(void)

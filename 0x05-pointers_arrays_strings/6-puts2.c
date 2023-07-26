@@ -3,7 +3,7 @@
 /**
  * puts2 - don't print and print, don't print and print ...
  *
- * @str: Param
+ * @str: Parame
  */
 
 void puts2(char *str)

@@ -4,7 +4,7 @@
  * print_array -> Prints n index of an array's integers
  *
  * @a: Param Pointer
- * @n: Param index Array
+ * @n: Parame index Array
  */
 
 void print_array(int *a, int n)
