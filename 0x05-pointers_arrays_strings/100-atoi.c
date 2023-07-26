@@ -3,9 +3,9 @@
 /**
  * _atoi -> Convert string to integer
  *
- * @s: Input
+ * @s: Para 
  *
- * Return: Integer Converted
+ * Return: Int Converted
  */
 
 int _atoi(char *s)
