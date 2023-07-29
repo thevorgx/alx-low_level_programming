@@ -10,27 +10,27 @@
 
 char *leet(char *str)
 {
-    int i = 0;
-    int j = 0;
-    char *p1 = "aAeEoOtTlL";
-    char *p2 = "4433007711";
+	int i = 0;
+	int j = 0;
+	char *p1 = "aAeEoOtTlL";
+	char *p2 = "4433007711";
 
-    while (str[i] != '\0')
-    {
-        j = 0;
-        while (j < 10)
-        {
-            if (str[i] == p1[j])
-            {
-                str[i] = p2[j];
-                break;
-            }
-            j++;
-        }
+	while (str[i] != '\0')
+	{
+	j = 0;
+	while (j < 10)
+	{
+	if (str[i] == p1[j])
+	{
+	str[i] = p2[j];
+	break;
+	}
+	j++;
+	}
 
-        i++;
-    }
+	i++;
+	}
 
-    return (str); 
+	return (str);
 }
 
