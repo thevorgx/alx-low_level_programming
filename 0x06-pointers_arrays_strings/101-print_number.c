@@ -14,7 +14,6 @@ void print_number(int n)
         _putchar('-');
         _putchar('2');
         print_number(147483648);
-        return;
     }
 
     n1 = (n < 0) ? -n : n;
