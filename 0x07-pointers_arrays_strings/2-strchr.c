@@ -3,9 +3,6 @@
 /**
  * _strchr - Locate the first occurrence of a character in a string.
  *
- * This function searches for the first occurrence of the specified character
- * within the given string and returns a pointer to that location.
- *
  * @s: A pointer to the string to be searched.
  * @c: The character to locate within the string.
  *
@@ -24,6 +21,5 @@ char *_strchr(char *s, char c)
 
 	index++;
 	}
-
 	return ('\0');
 }
