@@ -1,46 +1,44 @@
 #include "main.h"
 
 /**
- * is_palindrome - Checks if a string is a palindrome.
- * @s: Input string.
- *
- * Return: 1 if palindrome, 0 otherwise.
- */
-int is_palindrome(char *s)
-{
-    int len = _strlen_recursion(s);
-    return is_palindrome(s, 0, len - 1);
-}
-
-/**
- * _strlen_recursion - Calculates the length of a string recursively.
- * @s: Pointer to string.
- *
- * Return: Length of the string.
+ * _strlen_recursion - returns the length of a string.
+ * @s: string
+ * Return: the length of a string.
  */
 int _strlen_recursion(char *s)
 {
     if (*s == '\0')
-        return 0;
-    return 1 + _strlen_recursion(s + 1);
+        return (0);
+    else
+        return (1 + _strlen_recursion(s + 1));
 }
 
 /**
- * vor_palindrome - Checks if a string is a palindrome.
- * @s: Input string.
- * @left: Left index of the substring.
- * @right: Right index of the substring.
- *
- * Return: 1 if palindrome, 0 otherwise.
+ * vordet - detects if a string is a palindrome.
+ * @s: string.
+ * @n1: smallest iterator.
+ * @n2: biggest iterator.
+ * Return: 1 if s is a palindrome, 0 if not.
  */
-int vor_palindrome(char *s, int left, int right)
+int vordet(char *s, int n1, int n2)
 {
-    if (left >= right)
-        return 1;
-
-    if (*(s + left) != *(s + right))
-        return 0;
-
-    return vor_palindrome(s, left + 1, right - 1);
+    if (*(s + n1) == *(s + n2))
+    {
+        if (n1 == n2 || n1 == n2 + 1)
+            return (1);
+        return (0 + vordet(s, n1 + 1, n2 - 1));
+    }
+    return (0);
 }
 
+/**
+ * is_palindrome - detects if a string is a palindrome.
+ * @s: string.
+ * Return: 1 if s is a palindrome, 0 if not.
+ */
+int is_palindrome(char *s)
+{
+    if (*s == '\0')
+        return (1);
+    return (vordet(s, 0, _strlen_recursion(s) - 1));
+}
