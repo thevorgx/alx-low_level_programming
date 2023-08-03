@@ -5,7 +5,7 @@
  * @n: number param
  * Return: square of a number
  */
-int _sqrt_recursion(int n)
+int _isqrt(int n)
 {
         int v = 2;
 
@@ -23,7 +23,7 @@ int _sqrt_recursion(int n)
   * @i: square
   * Return: 1 if square, -1 if not else recur
   */
-int isqrt(int n, int i)
+int _sqrt_recursion(int n, int i)
 {
         if (i * i > n)
                 return (-1);
