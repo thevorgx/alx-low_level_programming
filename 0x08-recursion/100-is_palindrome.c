@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _strlen - Computes the length of a provided string.
- * @s: Pointer to the input string.
+ * is_palindrome - paladimor func
+ * @s: Pointer to the input string
  *
- * Return: The length of the string.
+ * Return: char pointer
  */
 
-int _strlen(char *s)
+int is_palindrome(char *s)
 {
 	if (*s == '\0')
 		return (0);
