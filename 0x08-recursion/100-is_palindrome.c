@@ -7,10 +7,10 @@
  */
 int _strlen_recursion(char *s)
 {
-    if (*s == '\0')
-        return (0);
-    else
-        return (1 + _strlen_recursion(s + 1));
+	if (*s == '\0')
+	return (0);
+	else
+	return (1 + _strlen_recursion(s + 1));
 }
 
 /**
@@ -22,11 +22,11 @@ int _strlen_recursion(char *s)
  */
 int vordet(char *s, int i, int n)
 {
-    if (i >= n)
-        return (1);
-    if (*(s + i) != *(s + n))
-        return (0);
-    return (vordet(s, i + 1, n - 1));
+	if (i >= n)
+	return (1);
+	if (*(s + i) != *(s + n))
+	return (0);
+	return (vordet(s, i + 1, n - 1));
 }
 
 /**
@@ -36,9 +36,9 @@ int vordet(char *s, int i, int n)
  */
 int is_palindrome(char *s)
 {
-    int len = _strlen_recursion(s);
-    if (len <= 1)
-        return (1);
-    return (vordet(s, 0, len - 1));
+	int len = _strlen_recursion(s);
+	if (len <= 1)
+	return (1);
+	return (vordet(s, 0, len - 1));
 }
 
