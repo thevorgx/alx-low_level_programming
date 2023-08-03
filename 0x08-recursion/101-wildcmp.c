@@ -1,44 +1,31 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - returns the length of a string.
- * @s: string
- * Return: the length of a string.
+ * wildcmp - compares two strings with wildcards.
+ * @s1: first string.
+ * @s2: second string. It can contain '*' as a special character.
+ * Return: 1 if the strings match, 0 otherwise.
  */
-int _strlen_recursion(char *s)
+int wildcmp(char *s1, char *s2)
 {
-    if (*s == '\0')
-        return (0);
-    else
-        return (1 + _strlen_recursion(s + 1));
-}
+	if (*s1 == '\0')
+	{
+		if (*s2 == '*')
+		{
+			return (wildcmp(s1, s2 + 1));
+		}
+		return (*s2 == '\0');
+	}
+	
+	if (*s2 == '*')
+	{
+		return (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2));
+	}
+	
+	if (*s1 == *s2)
+	{
+		return (wildcmp(s1 + 1, s2 + 1));
+	}
 
-/**
- * vordet - detects if a string is a palindrome.
- * @s: string.
- * @n1: smallest iterator.
- * @n2: biggest iterator.
- * Return: 1 if s is a palindrome, 0 if not.
- */
-int vordet(char *s, int n1, int n2)
-{
-    if (*(s + n1) == *(s + n2))
-    {
-        if (n1 == n2 || n1 == n2 + 1)
-            return (1);
-        return (0 + vordet(s, n1 + 1, n2 - 1));
-    }
-    return (0);
-}
-
-/**
- * is_palindrome - detects if a string is a palindrome.
- * @s: string.
- * Return: 1 if s is a palindrome, 0 if not.
- */
-int is_palindrome(char *s)
-{
-    if (*s == '\0')
-        return (1);
-    return (vordet(s, 0, _strlen_recursion(s) - 1));
+	return (0);
 }
