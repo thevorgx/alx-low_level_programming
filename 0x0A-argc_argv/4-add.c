@@ -9,6 +9,8 @@
  * Return: 0 if successful, 1 if an error occurred.
  */
 int main(int argc, char *argv[]) {
+    (void)argc; // Suppress unused variable warn
+
     int summ = 0;
 
     if (argc == 1) {
@@ -33,3 +35,4 @@ int main(int argc, char *argv[]) {
     printf("%d\n", summ);
     return (0);
 }
+
