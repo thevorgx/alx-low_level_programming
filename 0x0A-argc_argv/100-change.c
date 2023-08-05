@@ -13,13 +13,11 @@ int main(int argc, char *argv[])
 	int change = 0;
 	int num;
 
-	/* Check if there is one command-line argument */
 	if (argc == 2)
 	{
 	num = atoi(argv[1]);
 	if (num > 0)
 	{
-	/* Calculate change */
 	while (num >= 25)
 	{
 	num -= 25;
@@ -50,8 +48,6 @@ int main(int argc, char *argv[])
 	printf("%d\n", change);
 	return (0);
 	}
-
-
 	printf("Error\n");
 	return (1);
 }
