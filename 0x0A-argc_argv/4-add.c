@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <ctype.h>
+#include <string.h>
 
 /**
  * main - Entry point of the program.
@@ -10,18 +12,27 @@
  * Return: (0) if successful, (1) if an error occurred.
  */
 int main(int argc, char *argv[]) {
-    int sum = 0;
+    int j = 1;
+    int summ = 0;
 
-    for (int i = 1; i < argc; i++) {
-        for (int j = 0; argv[i][j] != '\0'; j++) {
-            if (argv[i][j] < '0' || argv[i][j] > '9') {
+    if (argc == 1) {
+        printf("0\n");
+        return (0);
+    }
+
+    while (j <= argc - 1) {
+        int i = 0;
+        while (argv[j][i] != '\0') {
+            if (!isdigit(argv[j][i])) {
                 printf("Error\n");
                 return (1);
             }
+            i++;
         }
-        sum += atoi(argv[i]);
+        summ += atoi(argv[j]);
+        j++;
     }
 
-    printf("%d\n", sum);
+    printf("%d\n", summ);
     return (0);
 }
