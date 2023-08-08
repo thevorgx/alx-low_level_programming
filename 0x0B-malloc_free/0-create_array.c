@@ -1,4 +1,4 @@
-#include "Main.h"
+#include "main.h"
 #include <stdlib.h>
 /**
  ** create_arr - Creates an array of characters and initializes it with a given character.
