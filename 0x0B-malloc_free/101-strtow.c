@@ -1,56 +1,26 @@
 #include <stdlib.h>
-#include <string.h>
 #include "main.h"
 
-char **strtow(char *str)
-{
-    int word_count = 0;
-    char *token;
-    char *copy;
-    int i;
-    int j;
-    char **result;
+/**
+ * countWords - Count the number of words in a string.
+ * @str: The input string.
+ *
+ * Return: The number of words in the string.
+ */
+int countWords(const char *str) {
+    int j = 0;
+    int i = 0;
+    int v = 0;
 
-    if (str == NULL || *str == '\0')
-        return NULL;
-
-    copy = strdup(str);
-    if (copy == NULL)
-        return NULL;
-
-    token = strtok(copy, " ");
-    while (token != NULL)
-    {
-        word_count++;
-        token = strtok(NULL, " ");
-    }
-
-    result = (char **)malloc((word_count + 1) * sizeof(char *));
-    if (result == NULL)
-    {
-        free(copy);
-        return NULL;
-    }
-
-    strcpy(copy, str);
-    token = strtok(copy, " ");
-    for (i = 0; i < word_count; i++)
-    {
-        result[i] = strdup(token);
-        if (result[i] == NULL)
-        {
-            for (j = 0; j < i; j++)
-                free(result[j]);
-            free(result);
-            free(copy);
-            return NULL;
+    while (str[j] != '\0') {
+        if (str[j] == ' ') {
+            v = 0;
+        } else if (v == 0) {
+            v = 1;
+            i++;
         }
-        token = strtok(NULL, " ");
+        j++;
     }
 
-    result[word_count] = NULL;
-    free(copy);
-
-    return result;
+    return (i);
 }
-
