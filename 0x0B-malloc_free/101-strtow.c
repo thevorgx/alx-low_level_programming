@@ -7,7 +7,8 @@
  *
  * Return: The number of words in the string.
  */
-int countWords(const char *str) {
+char **strtow(char *str);
+{
     int j = 0;
     int i = 0;
     int v = 0;
