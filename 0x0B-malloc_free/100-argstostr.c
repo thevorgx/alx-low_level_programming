@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -11,18 +11,20 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int total_length = 0;
-	int i;
-	int index = 0;
-	int j;
+    int total_length = 0;
+    int i;
+    int index = 0;
+    int j;
 
     if (ac == 0 || av == NULL)
         return (NULL);
 
+    char *result = (char *)malloc(total_length + 1);
+
     for (i = 0; i < ac; i++)
         total_length += strlen(av[i]) + 1;
 
-    char *result = (char *)malloc(total_length + 1);
+    result = (char *)malloc(total_length + 1);
     if (result == NULL)
         return (NULL);
 
@@ -35,5 +37,6 @@ char *argstostr(int ac, char **av)
     }
 
     result[index] = '\0';
+
     return (result);
 }
