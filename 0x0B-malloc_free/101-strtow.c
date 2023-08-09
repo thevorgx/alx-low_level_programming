@@ -31,6 +31,11 @@ int countw(char *s)
 
 	return (v);
 }
+/**
+ * **strtow - Split a string into words.
+ * @str: The input string.
+ * Return: NULL
+ **/
 char **strtow(char *str)
 {
 	char **x, *tmp;
