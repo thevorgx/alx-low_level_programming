@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 
 /**
  * strtow - Splits a string into words.
@@ -14,7 +15,8 @@ char **strtow(char *str)
 	char *copy;
 	int i;
 	int j;
-	
+	char **result;
+
     if (str == NULL || *str == '\0')
         return (NULL);
 
@@ -29,7 +31,7 @@ char **strtow(char *str)
         token = strtok(NULL, " ");
     }
 
-    char **result = (char **)malloc((word_count + 1) * sizeof(char *));
+    result = (char **)malloc((word_count + 1) * sizeof(char *));
     if (result == NULL)
     {
         free(copy);
