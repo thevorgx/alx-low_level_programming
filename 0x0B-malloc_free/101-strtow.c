@@ -7,7 +7,7 @@
  *
  * Return: The number of words in the string.
  */
-char **strtow(char *str);
+char **strtow(char *str)
 {
     int j = 0;
     int i = 0;
