@@ -11,7 +11,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-    char *conca; // Changed variable name
+    char *conca;
     unsigned int len1 = 0, len2 = 0, i, j;
 
     if (s1 == NULL)
@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
     while (s2[len2] != '\0')
         len2++;
 
-    conca = (char *)malloc((len1 + len2 + 1) * sizeof(char)); // Updated variable name
+    conca = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 
     if (conca == NULL)
         return (NULL);
