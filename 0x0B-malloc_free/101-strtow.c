@@ -8,17 +8,16 @@ char **strtow(char *str)
     char *token;
     char *copy;
     int i;
+    int j;
     char **result;
 
     if (str == NULL || *str == '\0')
         return NULL;
 
-    // Duplicate the input string to work with a copy
     copy = strdup(str);
     if (copy == NULL)
         return NULL;
 
-    // Count the number of words
     token = strtok(copy, " ");
     while (token != NULL)
     {
@@ -26,7 +25,6 @@ char **strtow(char *str)
         token = strtok(NULL, " ");
     }
 
-    // Allocate memory for the array of strings
     result = (char **)malloc((word_count + 1) * sizeof(char *));
     if (result == NULL)
     {
@@ -34,7 +32,6 @@ char **strtow(char *str)
         return NULL;
     }
 
-    // Reset the copy and tokenize the original string
     strcpy(copy, str);
     token = strtok(copy, " ");
     for (i = 0; i < word_count; i++)
@@ -42,7 +39,7 @@ char **strtow(char *str)
         result[i] = strdup(token);
         if (result[i] == NULL)
         {
-            for (int j = 0; j < i; j++)
+            for (j = 0; j < i; j++)
                 free(result[j]);
             free(result);
             free(copy);
