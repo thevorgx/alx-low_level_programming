@@ -13,17 +13,17 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-        int *resmem;
+	int *resmem;
 
-    if (nmemb == 0 || size == 0)
-        return (NULL);
+	if (nmemb == 0 || size == 0)
+	return (NULL);
 
-    resmem = malloc(nmemb * size);
+	resmem = malloc(nmemb * size);
 
-    if (resmem == NULL)
-        return (NULL);
+	if (resmem == NULL)
+	return (NULL);
 
-    memset(resmem, 0, nmemb * size);
+	memset(resmem, 0, nmemb * size);
 
-    return (resmem);
+	return (resmem);
 }
