@@ -7,7 +7,6 @@
  * @s1: The first string.
  * @s2: The second string.
  * @n: The maximum number of bytes from s2 to concatenate.
- *
  * Return: A pointer to the concatenated string, or NULL on failure.
  */
 
