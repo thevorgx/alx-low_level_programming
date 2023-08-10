@@ -3,11 +3,12 @@
 #include "main.h"
 
 /**
- * *string_nconcat - Concatenates two strings up to n bytes.
- * @s1: The first string.
- * @s2: The second string.
- * @n: The maximum number of bytes from s2 to concatenate.
- * Return: A pointer to the concatenated string, or NULL on failure.
+ * *string_nconcat - concatenates 2 strings.
+ *
+ * @s1: first string.
+ * @s2: second string.
+ * @n: string length.
+ * Return: pointer to concatenated string and NULL on failure.
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
