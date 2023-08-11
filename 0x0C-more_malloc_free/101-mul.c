@@ -71,6 +71,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < 3; i++)
 	{
 		char *num = argv[i];
+
 		while (*num)
 		{
 			if (!is_valid_digit(*num))
