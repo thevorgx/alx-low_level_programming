@@ -10,6 +10,10 @@
  */
 int main(int argc, char *argv[])
 {
+	long result;
+	int len, i;
+	char buffer [20];
+
     if (argc != 3)
     {
         _putchar('E');
@@ -21,7 +25,7 @@ int main(int argc, char *argv[])
         return (98);
     }
 
-    for (int i = 1; i < 3; i++)
+    for (i = 1; i < 3; i++)
     {
         char *num = argv[i];
         while (*num)
@@ -40,9 +44,8 @@ int main(int argc, char *argv[])
         }
     }
 
-    long long result = atoll(argv[1]) * atoll(argv[2]);
-    char buffer[20];
-    int len = 0;
+    result = atoll(argv[1]) * atoll(argv[2]);
+    len = 0;
 
     if (result == 0)
         _putchar('0');
@@ -53,7 +56,7 @@ int main(int argc, char *argv[])
             buffer[len++] = result % 10 + '0';
             result /= 10;
         }
-        for (int i = len - 1; i >= 0; i--)
+        for (i = len - 1; i >= 0; i--)
             _putchar(buffer[i]);
     }
 
