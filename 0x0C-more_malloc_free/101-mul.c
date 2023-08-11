@@ -14,53 +14,53 @@ int main(int argc, char *argv[])
 	int len, i;
 	char buffer [20];
 
-    if (argc != 3)
-    {
-        _putchar('E');
-        _putchar('r');
-        _putchar('r');
-        _putchar('o');
-        _putchar('r');
-        _putchar('\n');
-        return (98);
-    }
+	if (argc != 3)
+	{
+	_putchar('E');
+	_putchar('r');
+	_putchar('r');
+	_putchar('o');
+	_putchar('r');
+	_putchar('\n');
+	return (98);
+	}
 
-    for (i = 1; i < 3; i++)
-    {
-        char *num = argv[i];
-        while (*num)
-        {
-            if (*num < '0' || *num > '9')
-            {
-                _putchar('E');
-                _putchar('r');
-                _putchar('r');
-                _putchar('o');
-                _putchar('r');
-                _putchar('\n');
-                return (98);
-            }
-            num++;
-        }
-    }
+	for (i = 1; i < 3; i++)
+	{
+	char *num = argv[i];
+	while (*num)
+	{
+	if (*num < '0' || *num > '9')
+	{
+	_putchar('E');
+	_putchar('r');
+	_putchar('r');
+	_putchar('o');
+	_putchar('r');
+	_putchar('\n');
+	return (98);
+	}
+	num++;
+	}
+	}
 
-    result = atoll(argv[1]) * atoll(argv[2]);
-    len = 0;
+	result = atoll(argv[1]) * atoll(argv[2]);
+	len = 0;
 
-    if (result == 0)
-        _putchar('0');
-    else
-    {
-        while (result)
-        {
-            buffer[len++] = result % 10 + '0';
-            result /= 10;
-        }
-        for (i = len - 1; i >= 0; i--)
-            _putchar(buffer[i]);
-    }
+	if (result == 0)
+	_putchar('0');
+	else
+	{
+	while (result)
+	{
+	buffer[len++] = result % 10 + '0';
+	result /= 10;
+	}
+	for (i = len - 1; i >= 0; i--)
+	_putchar(buffer[i]);
+	}
 
-    _putchar('\n');
+	_putchar('\n');
 
-    return (0);
+	return (0);
 }
