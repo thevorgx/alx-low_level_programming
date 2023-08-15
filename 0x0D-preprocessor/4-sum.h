@@ -1,4 +1,4 @@
-#ifndef VORG2
-#define VORG2
-#define #define SUM(x, y) ((x) + (y))
+#ifndef VORG
+#define VORG
+#define SUM(x, y) ((x) + (y))
 #endif
