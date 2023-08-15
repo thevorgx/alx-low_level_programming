@@ -1,4 +1,4 @@
-#ifndef ABS(x)
-#define ABS(x)
+#ifndef VORG
+#define VORG
 #define ABS(x) ((x) < 0 ? -(x) : (x))
 #endif
