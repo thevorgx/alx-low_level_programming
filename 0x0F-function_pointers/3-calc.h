@@ -1,11 +1,15 @@
 #ifndef CALC_H
 #define CALC_H
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
  * struct op - the structure
  *
  * @op: operator
  * @f: function
  */
+
 typedef struct op
 {
         char *op;
@@ -17,6 +21,4 @@ int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
-#include <stdlib.h>
-#include <stdio.h>
 #endif
