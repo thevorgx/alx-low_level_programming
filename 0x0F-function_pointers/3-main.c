@@ -7,10 +7,9 @@
  *
  * Return: Always 0 (Success).
  */
-
 int main(int argc, char *argv[])
 {
-	int x = 0, y = 0, result = 0;
+	int a = 0, b = 0, result = 0;
 	char s;
 
 	if (argc != 4)
@@ -33,9 +32,9 @@ int main(int argc, char *argv[])
 	exit(99);
 	}
 
-	x = atoi(argv[1]);
-	y = atoi(argv[3]);
-	result = (get_op_func(argv[2]))(x, y);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	result = (get_op_func(argv[2]))(a, b);
 	printf("%d\n", result);
 	return (0);
 }
