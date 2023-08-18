@@ -6,44 +6,35 @@
  * @...: Additional arguments based on the format string.
  * Return: Nada
  **/
-
 void print_all(const char * const format, ...)
 {
-	va_list args;
+	va_list arguments;
 	unsigned int i = 0;
 	char *s;
 
-	va_start(args, format);
-
+	va_start(arguments, format);
 	while (format && format[i])
 	{
-		switch (format[i])
+		switch (format[i++])
 		{
 			case 'c':
-				printf("%c", va_arg(args, int));
+				printf("%c", va_arg(arguments, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(args, int));
+				printf("%d", va_arg(arguments, int));
 				break;
 			case 'f':
-				printf("%f", va_arg(args, double));
+				printf("%f", va_arg(arguments, double));
 				break;
 			case 's':
-				s = va_arg(args, char *);
-				if (s == NULL)
-					printf("(nil)");
-				else
-					printf("%s", s);
+				s = va_arg(arguments, char *);
+				printf("%s", s != NULL ? s : "(nil)");
 				break;
+			default:
+				continue;
 		}
-
-		if (format[i + 1] != '\0' && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
+		if (format[i])
 			printf(", ");
-
-		i++;
 	}
-
-	va_end(args);
-
 	printf("\n");
 }
