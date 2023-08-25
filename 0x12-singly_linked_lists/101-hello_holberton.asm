@@ -1,4 +1,4 @@
-        .file   "101-hello_holberton.asm"
+        .file   "101-hello_holberton.c"
         .text
         .section        .rodata
 .LC0:
