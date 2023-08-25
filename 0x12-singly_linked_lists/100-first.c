@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 /**
  * star - Function with constructor attribute to print a message on startup
  * auto before main.
