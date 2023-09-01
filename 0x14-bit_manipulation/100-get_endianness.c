@@ -6,7 +6,7 @@
   */
 int get_endianness(void)
 {
-	unsigned int i = 1;
+	int i = 1;
 
 	/*
 	 * God bless stock overflow
