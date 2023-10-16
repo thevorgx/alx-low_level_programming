@@ -20,12 +20,22 @@ int mul(int a, int b)
 
 int dev(int a, int b)
 {
-    int res = a / b;
+    int res;
+
+    if (b == 0)
+        return(0);
+
+    res = a / b;
     return (res);
 }
 
 int mod(int a, int b)
 {
-    int res = a % b;
+    int res;
+
+    if (b == 0)
+        return (0);
+
+    res = a % b;
     return (res);
 }
