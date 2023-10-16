@@ -18,12 +18,12 @@ int mul(int a, int b)
     return (res);
 }
 
-int dev(int a, int b)
+int div(int a, int b)
 {
     int res;
 
     if (b == 0)
-        return(0);
+        return(1);
 
     res = a / b;
     return (res);
@@ -34,7 +34,7 @@ int mod(int a, int b)
     int res;
 
     if (b == 0)
-        return (0);
+        return (1);
 
     res = a % b;
     return (res);
