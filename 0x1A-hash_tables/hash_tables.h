@@ -34,6 +34,7 @@ typedef struct hash_table_s
 	hash_node_t **array;
 } hash_table_t;
 
+
 /*Project prototypes*/
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
@@ -43,5 +44,6 @@ hash_node_t *check_collision_in_node(hash_node_t *head, const char *key);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
+
 
 #endif
