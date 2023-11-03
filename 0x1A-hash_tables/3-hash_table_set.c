@@ -47,29 +47,29 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(collision_node->value);
 		collision_node->value = strdup(value);
 		if (collision_node->value == NULL)
-			return (1);
+			return (0);
 	}
 	else
 	{
 		new_node = malloc(sizeof(hash_node_t));
 		if (new_node == NULL)
-			return (1);
+			return (0);
 
 		new_node->key = strdup(key);
 		if (new_node->key == NULL)
 		{
 			free(new_node);
-			return (1);
+			return (0);
 		}
 		new_node->value = strdup(value);
 		if (new_node->value == NULL)
 		{
 			free(new_node->key);
 			free(new_node);
-			return (1);
+			return (0);
 		}
 		new_node->next = ht->array[index];
 		ht->array[index] = new_node;
 	}
-	return (0);
+	return (1);
 }
