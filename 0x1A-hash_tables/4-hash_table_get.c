@@ -9,18 +9,19 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-    hash_node_t *idx;
+	hash_node_t *idx;
 
-    if (ht == NULL || key == NULL || *key == '\0')
-        return (NULL);
+	if (ht == NULL || key == NULL || *key == '\0')
+		return (NULL);
 
-    idx = ht->array[key_index((const unsigned char *)key, ht->size)];
+	idx = ht->array[key_index((const unsigned char *)key, ht->size)];
 
-    while (idx)
-    {
-        if (strcmp(idx->key, key) == 0)
-            return (idx->value);
-    }
+	while (idx)
+	{
+		if (strcmp(idx->key, key) == 0)
+			return (idx->value);
+		idx = idx->next;
+	}
 
-    return (NULL);
+	return (NULL);
 }
