@@ -3,9 +3,9 @@ RM = rm -rf
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
-NAME = school
+	NAME = school
 
-.phony all clean oclean fclean re
+.PHONY: all clean oclean fclean re
 
 all: $(OBJ) m.h
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
