@@ -1,5 +1,4 @@
 CFLAGS = -Wall -Werror -Wextra -pedantic
-RM = rm -rf
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
