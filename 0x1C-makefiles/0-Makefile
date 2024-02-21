@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
 all: school.c main.c
 	gcc main.c school.c -o school
