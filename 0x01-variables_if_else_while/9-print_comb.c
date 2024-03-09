@@ -7,20 +7,20 @@
  */
 int main(void)
 {
-int i;
+	int i;
 
-for (i = 0; i <= 9; i++)
-{
-putchar('0' + i);
+	for (i = 0; i <= 9; i++)
+	{
+		putchar('0' + i);
 
-if (i != 9)
-{
-putchar(',');
-putchar(' ');
-}
-}
+		if (i != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
 
-putchar('\n');
+	putchar('\n');
 
-return (0);
+	return (0);
 }
